@@ -1,0 +1,91 @@
+/* Algemene layout */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* zorgt dat hij boven andere elementen staat */
+  background-color: #333; /* of wat je achtergrond ook is */
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* optioneel: schaduw voor zichtbaarheid */
+}
+
+
+.menu-wrapper {
+  background-color: #333;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 56px;
+  transition: width 0.3s ease, height 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-wrapper.open {
+  width: 220px;
+  height: auto;
+}
+
+.menu-toggle {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Navigatie */
+.menu-nav {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.menu-nav.hide {
+  display: none;
+}
+
+.menu-nav.show {
+  display: block;
+}
+
+.menu-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-nav li {
+  margin-bottom: 0.75rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+.nav-link.active {
+  background-color: #00c896;
+  color: black;
+}
+

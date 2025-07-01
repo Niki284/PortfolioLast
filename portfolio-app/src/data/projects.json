@@ -1,0 +1,96 @@
+{
+    "projects": [
+        {   
+            "id": 1,
+            "name": "Snake game",
+            "year": "2021",
+            "picture": "/img/snake.PNG",
+            "github": "https://github.com/Niki284/Snake.io",
+            "website": "https://niki284.github.io/Snake.io/",
+            "info":"Deze spel dat ik heb gemaakt voor co-working. Dat is een spel om vrij tijd spelen alleen."
+            
+        },
+        {   
+            "id": 2,
+            "name": "She to Africa",
+            "year": "2022",
+            "picture": "/img/africa.png",
+            "github": "https://github.com/Niki284/Niki284.github.io",
+            "website": "https://niki284.github.io/",
+            "info":"Deze project gaat over she to africa. Dat was een intressante website dat we moesten na bouwen."
+        },
+        {   
+            "id": 3,
+            "name": "Europa Universalles IV",
+            "year": "2021",
+            "picture": "/img/logobootstrap.png",
+            "github": "https://github.com/Niki284/BootsrapSite.io",
+            "website": "https://niki284.github.io/BootsrapSite.io/",
+            "info":"Europa uiniversalles IV spel die ik heb gekozen om te uitlegen.Als je wil meer weten van die spel dan moet je heer kliken."
+        },
+        {   
+            "id": 4,
+            "name": "Europa Universalles IV 1.1",
+            "year": "2021",
+            "picture": "/img/logobootstrap.png",
+            "github": "https://github.com/Niki284/BootsrapSite.io",
+            "website": "https://niki284.github.io/BootsrapSite.io/",
+            "info":"Europa uiniversalles IV spel die ik heb gekozen om te uitlegen.Als je wil meer weten van die spel dan moet je heer kliken."
+        },
+        {   
+            "id": 5,
+            "name": "Eerste project 3d",
+            "year": "2023",
+            "picture": "/img/eiland.jpg",
+            "github": "https://github.com/pgmgent-2324-iwebapp/interactive-diorama-Niki284",
+            "website": "https://pgmgent-2324-iwebapp.github.io/interactive-diorama-Niki284/#/interactive-diorama",
+            "info":"Dit project richt zich op het visualiseren van een eiland in 3D. Het proces begint met het creëren van 3D-objecten in Blender, een populaire tool voor 3D-modellering."
+            
+        },
+        {   
+            "id": 6,
+            "name": "EX Realitie Hoge School",
+             "year": "2023",
+            "picture": "/img/bg.png",
+            "github": "https://github.com/Niki284/winkel/tree/main",
+            "website": "https://winkel-shop-cr98.vercel.app/",
+            "info":"Dit project richt zich op het visualiseren van een hogeschool in 3D. Het proces begint met het creëren van 3D-objecten in Blender, een populaire tool voor 3D-modellering. Deze objecten worden vervolgens geëxporteerd naar React, een JavaScript-framework voor het bouwen van webapplicaties. In React worden de objecten nauwkeurig gepositioneerd om de structuur en indeling van de hogeschool weer te geven. Het eindresultaat is een interactieve 3D-weergave van de hogeschool, waarin gebruikers de lay-out en architectuur vanuit verschillende perspectieven kunnen bekijken."
+        },
+         {   
+            "id": 7,
+            "name": "De Familie Staamboom",
+             "year": "2024",
+            "picture": "/img/bg.png",
+            "github": "https://github.com/Niki284/winkel/tree/main",
+            "website": "https://winkel-shop-cr98.vercel.app/",
+            "info":"Dit project richt zich op het visualiseren van een hogeschool in 3D. Het proces begint met het creëren van 3D-objecten in Blender, een populaire tool voor 3D-modellering. Deze objecten worden vervolgens geëxporteerd naar React, een JavaScript-framework voor het bouwen van webapplicaties. In React worden de objecten nauwkeurig gepositioneerd om de structuur en indeling van de hogeschool weer te geven. Het eindresultaat is een interactieve 3D-weergave van de hogeschool, waarin gebruikers de lay-out en architectuur vanuit verschillende perspectieven kunnen bekijken."
+        },
+         {   
+            "id": 8,
+            "name": "De 4eurating",
+             "year": "2024",
+            "picture": "/img/bg.png",
+            "github": "https://github.com/Niki284/winkel/tree/main",
+            "website": "https://winkel-shop-cr98.vercel.app/",
+            "info":"Dit project richt zich op het visualiseren van een hogeschool in 3D. Het proces begint met het creëren van 3D-objecten in Blender, een populaire tool voor 3D-modellering. Deze objecten worden vervolgens geëxporteerd naar React, een JavaScript-framework voor het bouwen van webapplicaties. In React worden de objecten nauwkeurig gepositioneerd om de structuur en indeling van de hogeschool weer te geven. Het eindresultaat is een interactieve 3D-weergave van de hogeschool, waarin gebruikers de lay-out en architectuur vanuit verschillende perspectieven kunnen bekijken."
+        },
+         {   
+            "id": 9,
+            "name": "De hackaton",
+             "year": "2025",
+            "picture": "/img/bg.png",
+            "github": "https://github.com/Niki284/winkel/tree/main",
+            "website": "https://winkel-shop-cr98.vercel.app/",
+            "info":"Dit project richt zich op het visualiseren van een hogeschool in 3D. Het proces begint met het creëren van 3D-objecten in Blender, een populaire tool voor 3D-modellering. Deze objecten worden vervolgens geëxporteerd naar React, een JavaScript-framework voor het bouwen van webapplicaties. In React worden de objecten nauwkeurig gepositioneerd om de structuur en indeling van de hogeschool weer te geven. Het eindresultaat is een interactieve 3D-weergave van de hogeschool, waarin gebruikers de lay-out en architectuur vanuit verschillende perspectieven kunnen bekijken."
+        },
+        {   
+            "id": 10,
+            "name": "De hackaton",
+             "year": "2021",
+            "picture": "/img/bg.png",
+            "github": "https://github.com/Niki284/winkel/tree/main",
+            "website": "https://winkel-shop-cr98.vercel.app/",
+            "info":"Dit project richt zich op het visualiseren van een hogeschool in 3D. Het proces begint met het creëren van 3D-objecten in Blender, een populaire tool voor 3D-modellering. Deze objecten worden vervolgens geëxporteerd naar React, een JavaScript-framework voor het bouwen van webapplicaties. In React worden de objecten nauwkeurig gepositioneerd om de structuur en indeling van de hogeschool weer te geven. Het eindresultaat is een interactieve 3D-weergave van de hogeschool, waarin gebruikers de lay-out en architectuur vanuit verschillende perspectieven kunnen bekijken."
+        }
+    ]
+}

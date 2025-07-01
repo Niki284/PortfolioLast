@@ -1,0 +1,56 @@
+/* Diensten Container */
+.dinst {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Dienstkaart */
+.dinst__card {
+  background: rgba(255, 255, 255, 0.05); /* semi-transparant wit */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Dienst Logo */
+.dinst__logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 0.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Dienst Tekst */
+.dinst__text {
+  flex: 1;
+  color: #cccccc;
+}
+
+/* Dienst Titel (optioneel) */
+.dinst__title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #f0f0f0;
+}
+
+/* Dienst Beschrijving (optioneel) */
+.dinst__description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.dinst__card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+}
