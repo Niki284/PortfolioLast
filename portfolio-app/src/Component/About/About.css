@@ -1,83 +1,202 @@
+
 .about {
-  padding: 2rem; 
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: clamp(48px, 8vw, 96px) 24px;
+  background: #f8fafc;
 }
 
 .about__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 80px);
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.about__image {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  margin-inline: auto;
 }
 
 .about__image img {
-  max-width: 300px;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  background: #e2e8f0;
+  box-shadow: 0 18px 45px rgb(15 23 42 / 10%);
+}
+
+.about__image-caption {
+  position: absolute;
+  right: -16px;
+  bottom: 24px;
+  max-width: calc(100% - 16px);
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
 }
 
 .about__content {
-  flex: 1;
-  max-width: 700px;
-   color: #ffffff;
+  max-width: 650px;
+  color: #17212b;
+}
+
+.about__eyebrow {
+  margin: 0 0 14px;
+  color: #0f766e;
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
 }
 
 .about__title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
+  margin: 0 0 24px;
+  color: #17212b;
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+}
+
+.about__title span {
+  color: #0f766e;
+}
+
+.about__intro {
+  margin: 0 0 20px;
+  color: #334155;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.7;
 }
 
 .about__paragraph {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: #ffffff;
+  margin: 0 0 16px;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.9;
 }
 
-.about__button-wrapper {
-  margin-top: 2rem;
+.about__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.about__fact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.about__fact-label {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.about__fact-value {
+  color: #17212b;
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.about__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
 }
 
 .about__button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #0070f3;
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid #0f766e;
+  border-radius: 9px;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 650;
   text-decoration: none;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
 }
 
 .about__button:hover {
-  background-color: #0059c1;
+  transform: translateY(-2px);
+  background: #115e59;
+  color: #ffffff;
 }
 
-
-.about {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
+.about__button:focus-visible {
+  outline: 3px solid #5eead4;
+  outline-offset: 4px;
 }
 
-.about__image img {
-  max-width: 100%;
-  border-radius: 12px;
+@media (max-width: 760px) {
+  .about {
+    padding: 48px 20px;
+  }
+
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about__image {
+    max-width: 300px;
+  }
+
+  .about__image-caption {
+    right: -8px;
+    bottom: 16px;
+  }
+
+  .about__content {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .about__title {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
 }
 
-.about__button-wrapper {
-  margin-top: 1rem;
+@media (max-width: 420px) {
+  .about__facts {
+    grid-template-columns: 1fr;
+  }
+
+  .about__image-caption {
+    right: 8px;
+  }
 }
 
-.about__button {
-  background-color: #0070f3;
-  color: white;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 8px;
-}
+@media (prefers-reduced-motion: reduce) {
+  .about__button {
+    transition: none;
+  }
 
+  .about__button:hover {
+    transform: none;
+  }
+}
