@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css";
@@ -14,8 +13,9 @@ function Header({ links = [] }) {
 
   // Detailpagina's zijn bereikbaar via een projectkaart.
   const navigationLinks = links.filter(
-    (link) => link.name.toLowerCase() !== "detail" &&
-    link.name.toLowerCase() !== "contact"
+    (link) =>
+      link.name.toLowerCase() !== "detail" &&
+      link.name.toLowerCase() !== "contact",
   );
 
   return (
@@ -158,4 +158,3 @@ export { Header };
 // }
 
 // export { Header };
-

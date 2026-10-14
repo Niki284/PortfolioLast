@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
@@ -15,8 +14,8 @@ export const Footer = () => {
             <h2>Bedankt voor je bezoek.</h2>
 
             <p>
-              Op zoek naar een junior front-end developer?
-              Ik kom graag met je in contact.
+              Op zoek naar een junior front-end developer? Ik kom graag met je
+              in contact.
             </p>
           </div>
 
@@ -27,9 +26,7 @@ export const Footer = () => {
               dymovichnikita@gmail.com
             </a>
 
-            <a href="tel:+32472554036">
-              +32 472 55 40 36
-            </a>
+            <a href="tel:+32472554036">+32 472 55 40 36</a>
           </div>
 
           <nav className="footer__navigation" aria-label="Footernavigatie">

@@ -1,156 +1,273 @@
-.Cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
-  max-width: 1200px;
-  margin: 3.5rem auto;
-  padding: 0 1rem;
-}
-
-.Card {
-  background-color: #1e1e1e;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  transition: transform 0.3s ease;
-  height: 100%; /* zorg dat hij zich vult in de grid */
-  min-height: 460px; /* gefixeerde hoogte voor uniformiteit */
-}
-
-.Card:hover {
-  transform: translateY(-5px);
-}
-
-.Card__logo {
-  position: relative;
-  width: 100%;
-    
-}
-.Card__year {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  font-size: 0.85rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  z-index: 1;
-  }
-
-.Card__logo img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;  position: relative;
-}
-
-.Card__text {
-  flex: 1;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.Card__text h2 {
-  font-size: 1.4rem;
-  margin: 0;
-  color: #fff;
-}
-
-.Card__text p {
-  font-size: 0.95rem;
-  color: #ccc;
-  line-height: 1.5;
-  max-height: 6rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-
-/* Elke individuele kaart */
-.Card {
-  background-color: #1e1e1e;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.Card:hover {
-  transform: translateY(-5px);
-}
-
-.Card__logo img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.Card__text {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.Card__text h2 {
-  font-size: 1.4rem;
-  margin: 0;
-  color: #fff;
-}
-
-.Card__text p {
-  font-size: 0.95rem;
-  color: #ccc;
-  line-height: 1.5;
-}
-
+/* Filter boven de projecten */
 .filter-container {
-  margin: 1rem auto;
-  max-width: 1200px;
-  padding: 0 1rem;
-  font-size: 1rem;
-  color: white;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: min(100% - 2rem, 1200px);
+  margin: 1.5rem auto 0;
+  padding: 1.25rem 1.5rem;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.9rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.filter-container label {
+  color: #334155;
 }
 
 .filter-container select {
-  margin-left: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.3rem;
-  border: none;
+  min-width: 130px;
+  padding: 0.7rem 2.25rem 0.7rem 0.9rem;
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.6rem;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.filter-container select:hover {
+  border-color: #0f766e;
+}
+
+.filter-container select:focus-visible {
+  outline: none;
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+/* Paginatie onder de projectkaarten */
 .pagination {
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  margin: 2rem auto;
+  margin: 2.5rem auto 4rem;
+  padding: 0 1rem;
 }
 
 .pagination button {
-  background-color: gray;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.65rem 0.9rem;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.pagination button:hover,
+.pagination button:hover:not(:disabled):not(.active) {
+  color: #0f766e;
+  background: #f0fdfa;
+  border-color: #0f766e;
+  transform: translateY(-1px);
+}
+
+/* Huidige pagina */
 .pagination button.active {
-  background-color: #444;
+  color: #ffffff;
+  background: #0f766e;
+  border-color: #0f766e;
+  box-shadow: 0 3px 8px rgba(15, 118, 110, 0.2);
+}
+
+/* Uitgeschakelde vorige/volgende-knoppen */
+.pagination button:disabled {
+  color: #94a3b8;
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+.pagination button:focus-visible {
+  outline: 3px solid #5eead4;
+  outline-offset: 3px;
+}
+
+/* Mobiel */
+@media (max-width: 600px) {
+  .filter-container {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+  }
+
+  .filter-container select {
+    flex: 1;
+  }
+
+  .pagination {
+    gap: 0.35rem;
+    margin: 2rem auto 3rem;
+  }
+
+  .pagination button {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+.Cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  width: min(100% - 2rem, 1200px);
+  margin: 2.5rem auto 4rem;
+  align-items: stretch;
+}
+
+/* Individuele projectkaart */
+.Card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.Card:hover {
+  transform: translateY(-6px);
+  border-color: #99d5d0;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+}
+
+/* Afbeelding en jaartal */
+.Card__logo {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f1f5f9;
+  aspect-ratio: 16 / 10;
+}
+
+.Card__logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.Card:hover .Card__logo img {
+  transform: scale(1.04);
+}
+
+.Card__year {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+/* Tekstgedeelte */
+.Card__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.35rem;
+}
+
+.Card__text h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.3rem;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.Card__text p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* Zorg dat de knop onderaan de kaart kan staan */
+.Card__text>a,
+.Card__text>button {
+  margin-top: auto;
+}
+
+/* Geen resultaten */
+.Cards__empty {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  color: #475569;
+  text-align: center;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .Cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+/* Mobiel */
+@media (max-width: 600px) {
+  .Cards {
+    grid-template-columns: 1fr;
+    width: min(100% - 2rem, 420px);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .Card__text {
+    padding: 1.15rem;
+  }
+
+  .Card__text h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Minder beweging wanneer de bezoeker dat instelt */
+@media (prefers-reduced-motion: reduce) {
+
+  .Card,
+  .Card__logo img {
+    transition: none;
+  }
+
+  .Card:hover,
+  .Card:hover .Card__logo img {
+    transform: none;
+  }
 }
