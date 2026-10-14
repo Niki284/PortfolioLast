@@ -1,4 +1,3 @@
-
 import data from "../../data/technologies.json";
 import "./Tech.css";
 
