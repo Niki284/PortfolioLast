@@ -7,7 +7,6 @@ const AboutPage = () => {
   return (
     <div className='main'>
       <About isPreview={false} />
-      <h1 className='contact--title'>Technologie</h1>
       <Tech />
       <Diensten />
     </div>
